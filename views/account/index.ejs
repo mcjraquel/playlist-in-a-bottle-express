@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+</head>
+<body>
+    <h1><%= account.display_name %></h1>
+    <img src="<%= account.images[0].url %>" alt="">
+    <form action="<%= account.external_urls.spotify %>">
+        <button>Visit Spotify Profile</button>
+    </form>
+</body>
+</html>

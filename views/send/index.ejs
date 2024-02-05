@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send a bottle</title>
+</head>
+<body>
+    <form action="/send" method="POST">
+        <label for="spotifyPlaylistId">Playlist: </label>
+        <select name="spotifyPlaylistId" id="spotifyPlaylistId">
+            <% for (p of playlists.items) { %>
+                <option value="<%= p.id %>"><%= p.name %></option>
+            <% } %>
+        </select>
+        <label for="message">Message: </label>
+        <input type="text" name="message" id="message">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

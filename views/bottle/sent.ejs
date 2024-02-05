@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottle Sent</title>
+</head>
+<body>
+    <h1>Bottle Sent!</h1>
+    <h2><%= playlist.name %></h2>
+    <a href="<%= playlist.href %>">View on Spotify</a>
+    <ul>
+    <% for (t of tracks) { %>
+        <li><%= t.name %> - <%= t.artists.map(a => a.name).join(", ") %> - <%= t.album.name %> 
+        </li>
+    <% } %>
+    </ul>
+    <h2>Message</h2>
+    <p><%= bottle.message %></p>
+
+    <a href="/app">Back to the waiting screen</a>
+</body>
+</html>
